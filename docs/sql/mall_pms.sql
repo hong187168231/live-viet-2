@@ -169,7 +169,7 @@ CREATE TABLE `pms_spu`  (
 -- ----------------------------
 -- Records of pms_spu
 -- ----------------------------
-INSERT INTO `pms_spu` VALUES (1, '小米10', 5, 1, 599900, 399900, 1, 'http://a.live.tech:9000/default/063350d473a64ee7857e91841add1177.jpg', '[\"https://gitee.com/haoxr/image/raw/master/default/image-20210702002909113.png\", \"https://gitee.com/haoxr/image/raw/master/default/image-20210702002909113.png\"]', '台', '商品简介', '商品详情', 1, NULL, '2021-08-08 00:56:25');
+INSERT INTO `pms_spu` VALUES (1, '小米10', 5, 1, 599900, 399900, 1, 'http://a.live.tech:9000/default/063350d473a64ee7857e91841add1177.jpg', '[\"https://gitee.com/puff/image/raw/master/default/image-20210702002909113.png\", \"https://gitee.com/puff/image/raw/master/default/image-20210702002909113.png\"]', '台', '商品简介', '商品详情', 1, NULL, '2021-08-08 00:56:25');
 INSERT INTO `pms_spu` VALUES (72, '手机2号', 5, 1, 100, 200, 0, 'http://a.live.tech:9000/default/26afc0d59f094c6d9dff8c2cf8ac1863.jfif', NULL, NULL, '123', NULL, NULL, '2021-08-08 08:30:38', '2021-08-08 08:30:38');
 INSERT INTO `pms_spu` VALUES (73, '123', 5, 1, 12300, 12300, 0, 'http://a.live.tech:9000/default/f76fa430756749bab698d3797ca8da04.jfif', '[\"http://a.live.tech:9000/default/6813cdaa196d47e8b09436db12323a7f.jpg\"]', NULL, '123', '<p>123</p>', NULL, '2021-08-08 11:28:50', '2021-08-08 11:29:49');
 INSERT INTO `pms_spu` VALUES (74, '123', 5, 1, 12300, 12300, 0, 'http://a.live.tech:9000/default/aae526c28c114561b249add9e34922f8.jfif', '[\"http://a.live.tech:9000/default/2e317170b2c241c4b4a8d86fe0926f8c.jfif\"]', NULL, '123', '', NULL, '2021-08-09 22:24:46', '2021-08-09 22:24:46');

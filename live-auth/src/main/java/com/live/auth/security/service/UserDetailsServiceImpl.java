@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * 【重要】从数据库获取用户信息，用于和前端传过来的用户信息进行密码判读
- * @author haoxr
+ * @author puff
  * @date 2020-05-27
  */
 @Service

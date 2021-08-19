@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * @description 锁定库存
- * @author haoxr
+ * @author puff
  * @createTime 2021-03-07 15:14
  */
 @Data

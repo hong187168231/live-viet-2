@@ -7,7 +7,7 @@ import com.live.admin.service.ISysOauthClientService;
 import org.springframework.stereotype.Service;
 
 /**
- * @author haoxr
+ * @author puff
  * @date 2020-11-06
  */
 @Service

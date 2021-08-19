@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author haoxr
+ * @author puff
  * @description 微信小程序认证接口
  * @createTime 2021/5/20 23:37
  */

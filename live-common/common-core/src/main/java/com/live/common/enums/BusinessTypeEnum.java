@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author haoxr
+ * @author puff
  * @date 2021-02-17
  */
 public enum BusinessTypeEnum {

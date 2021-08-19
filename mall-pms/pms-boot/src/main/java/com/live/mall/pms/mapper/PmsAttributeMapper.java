@@ -5,7 +5,7 @@ import com.live.mall.pms.pojo.entity.PmsAttribute;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author haoxr
+ * @author puff
  * @date 2020-11-06
  */
 @Mapper

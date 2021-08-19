@@ -3,7 +3,7 @@ package com.live.auth.common.enums;
 import lombok.Getter;
 
 /**
- * @author haoxr
+ * @author puff
  * @description TODO
  * @createTime 2021/6/5 17:57
  */

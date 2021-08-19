@@ -7,7 +7,7 @@ import com.live.mall.pms.service.IPmsSpuAttributeValueService;
 import org.springframework.stereotype.Service;
 
 /**
- * @author haoxr
+ * @author puff
  * @date 2020-12-12
  */
 @Service

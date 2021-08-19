@@ -1,7 +1,7 @@
 package com.live.common.result;
 
 /**
- * @author haoxr
+ * @author puff
  **/
 public interface IResultCode {
 

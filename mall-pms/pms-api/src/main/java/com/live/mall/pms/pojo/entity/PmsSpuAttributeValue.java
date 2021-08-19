@@ -6,7 +6,7 @@ import com.live.common.base.BaseEntity;
 import lombok.Data;
 
 /**
- * @author haoxr
+ * @author puff
  * @date 2020-11-06
  */
 @Data

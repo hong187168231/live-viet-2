@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @description document 是 ES 里的一个 JSON 对象，包括零个或多个field，类比关系数据库的一行记录
- * @author haoxr
+ * @author puff
  * @createTime 2021/3/9 22:14
  */
 @Data

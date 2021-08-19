@@ -5,7 +5,7 @@ import com.live.mall.pms.pojo.entity.PmsSpuAttributeValue;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author haoxr
+ * @author puff
  * @date 2020-11-06
  */
 @Mapper

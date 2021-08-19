@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * 资源服务器配置
  *
- * @author haoxr
+ * @author puff
  * @date 2020-05-01
  */
 @ConfigurationProperties(prefix = "security")

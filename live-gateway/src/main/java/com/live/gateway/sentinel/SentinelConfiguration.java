@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import javax.annotation.PostConstruct;
 
 /**
- * @author haoxr
+ * @author puff
  * @description 自定义网关流控异常响应
  * @createTime 2021/4/11 19:58
  */
