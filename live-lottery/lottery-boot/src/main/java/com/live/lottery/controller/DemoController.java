@@ -1,9 +1,9 @@
-package com.live.user.controller;
+package com.live.lottery.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.live.common.annotation.LoginUser;
 import com.live.common.pojo.bo.LoginInfo;
 import com.live.common.redis.utils.RedisUtils;
-import com.live.user.pojo.entity.MemBaseInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -14,25 +14,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-@Api(tags = "会员接口")
+@Api(tags = "demo接口")
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/demo")
 @Slf4j
 @AllArgsConstructor
-public class TestController {
+public class DemoController {
 
-    @Resource
-    private RedisUtils redisUtils;
-
-    @ApiOperation(value = "hello")
+    @ApiOperation(value = "demo接口")
     @GetMapping("/hello")
     public String detail(@LoginUser LoginInfo loginInfo) {
-        MemBaseInfo memBaseInfo = new MemBaseInfo();
-        memBaseInfo.setAccount("dd");
-        memBaseInfo.setBalance(2000L);
-        redisUtils.set("dsd", memBaseInfo);
+        System.out.println(JSON.toJSONString(loginInfo));
         return "ok";
     }
-
 
 }

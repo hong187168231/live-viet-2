@@ -3,8 +3,11 @@ package com.live.user.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.live.common.constant.AppConstants;
+import com.live.common.pojo.bo.LoginInfo;
 import com.live.common.redis.utils.RedisUtils;
 import com.live.common.result.Result;
+import com.live.common.utils.CopyUtils;
 import com.live.common.utils.RandomUtil;
 import com.live.common.utils.encrypt.MD5;
 import com.live.user.common.constant.UserConstants;
@@ -49,9 +52,15 @@ public class MemBaseInfoServiceImpl extends ServiceImpl<MemBaseInfoMapper, MemBa
         String seckey = req.getAccount() + RandomUtil.uuid();
         String accToken = MD5.md5(seckey, "UTF-8");
 
-        redisUtils.set(UserConstants.USER_LOGIN_ACCTOKEN + accToken, JSON.toJSONString(userInfo), 60 * 60 * 24 * 7);
-        redisUtils.set(UserConstants.USER_LOGIN_INFO_KEY + req.getAccount(), accToken, 60 * 60 * 24 * 7);
+        redisUtils.set(AppConstants.USER_LOGIN_ACCTOKEN + accToken, JSON.toJSONString(userInfo), 60 * 60 * 24 * 7);
+        redisUtils.set(AppConstants.USER_LOGIN_INFO_KEY + req.getAccount(), accToken, 60 * 60 * 24 * 7);
         //返回登录信息
+        LoginInfo loginInfo = new LoginInfo();
+        try {
+            CopyUtils.conver(userInfo,loginInfo);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         AppLoginVo appLoginVo = this.getAppLoginVo(accToken, userInfo);
         return Result.success(appLoginVo);
     }

@@ -1,4 +1,4 @@
-package com.live.user.intercept;
+package com.live.lottery.intercept;
 
 import com.alibaba.fastjson.JSONObject;
 import com.live.common.annotation.AllowAccess;
@@ -8,10 +8,6 @@ import com.live.common.pojo.bo.LoginInfo;
 import com.live.common.redis.utils.RedisUtils;
 import com.live.common.result.ResultCode;
 import com.live.common.utils.BaseUtil;
-import com.live.common.web.exception.BizException;
-import com.live.common.web.util.JwtUtils;
-import com.live.user.common.constant.UserConstants;
-import com.live.user.pojo.entity.MemBaseInfo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;

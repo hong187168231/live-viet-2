@@ -15,6 +15,9 @@ public enum ResultCode implements IResultCode, Serializable {
 
     SUCCESS("00000", "一切ok"),
 
+    LIVE_ERROR_401("401", "用户未登录或已过期"),
+
+
     USER_ERROR("A0001", "用户端错误"),
     USER_LOGIN_ERROR("A0200", "用户登录异常"),
 
@@ -35,6 +38,7 @@ public enum ResultCode implements IResultCode, Serializable {
 
     PARAM_ERROR("A0400", "用户请求参数错误"),
     RESOURCE_NOT_FOUND("A0401", "请求资源不存在"),
+    RESOURCE_NOT_FOUND2("A0402", "您的帐号已在另一个设备上登录"),
     PARAM_IS_NULL("A0410", "请求必填参数为空"),
     QUERY_MODE_IS_NULL("A0411", "查询模式为空"),
 
