@@ -1,4 +1,4 @@
-package com.live.admin.common.constant;
+package com.live.lottery.common.constant;
 
 /**
  * 管理平台常量

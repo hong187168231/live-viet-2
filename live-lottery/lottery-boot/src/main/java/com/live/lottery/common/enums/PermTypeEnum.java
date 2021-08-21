@@ -1,4 +1,4 @@
-package com.live.admin.common.enums;
+package com.live.lottery.common.enums;
 
 import lombok.Getter;
 import lombok.Setter;

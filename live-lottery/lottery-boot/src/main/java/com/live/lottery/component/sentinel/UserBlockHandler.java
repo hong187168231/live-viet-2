@@ -1,4 +1,4 @@
-package com.live.admin.component.sentinel;
+package com.live.lottery.component.sentinel;
 
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.live.admin.pojo.vo.UserVO;
