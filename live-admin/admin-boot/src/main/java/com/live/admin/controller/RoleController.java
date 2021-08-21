@@ -67,8 +67,8 @@ public class RoleController {
                         .like(StrUtil.isNotBlank(name), SysRole::getName, name)
                         .ne(!isRoot, SysRole::getCode, GlobalConstants.ROOT_ROLE_CODE)
                         .orderByAsc(SysRole::getSort)
-                        .orderByDesc(SysRole::getGmtModified)
-                        .orderByDesc(SysRole::getGmtCreate);
+                        .orderByDesc(SysRole::getUpdateTime)
+                        .orderByDesc(SysRole::getCreateTime);
                 Page<SysRole> result = iSysRoleService.page(new Page<>(page, limit), queryWrapper);
                 return Result.success(result.getRecords(), result.getTotal());
             case LIST:

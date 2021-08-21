@@ -125,7 +125,7 @@
                 </executions>
             </plugin>
         </plugins>
-        <finalName>${project.artifactId}</finalName>
+        <finalName>${parent.artifactId}</finalName>
     </build>
 
 </project>

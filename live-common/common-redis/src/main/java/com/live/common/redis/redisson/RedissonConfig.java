@@ -1,8 +1,6 @@
 package com.live.common.redis.redisson;
 
 import cn.hutool.core.util.StrUtil;
-import com.live.common.utils.CollectionUtil;
-import org.apache.commons.lang3.StringUtils;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.ClusterServersConfig;
@@ -16,10 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author huawei
+ * @author puff
  * @desc Redisson 配置
- * @email huawei_code@163.com
- * @date 2021/2/22
  */
 @Configuration
 public class RedissonConfig {
@@ -32,14 +28,14 @@ public class RedissonConfig {
         if (redissonProperties.getHost() == null) {
             return Redisson.create(clusterConfiguration());
         } else {
-            return Redisson.create(standaloneConfiguration());
+            return Redisson.create(singleConfiguration());
         }
     }
 
-    private Config standaloneConfiguration() {
+    private Config singleConfiguration() {
         Config config = new Config();
         SingleServerConfig singleServerConfig = config.useSingleServer();
-        singleServerConfig.setAddress("redis://" +redissonProperties.getHost() + ":" + redissonProperties.getPort());
+        singleServerConfig.setAddress("redis://" + redissonProperties.getHost() + ":" + redissonProperties.getPort());
         String password = redissonProperties.getPassword();
         if (StrUtil.isNotBlank(password)) {
             singleServerConfig.setPassword(password);

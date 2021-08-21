@@ -18,10 +18,6 @@
         <module>live-game</module>
         <module>live-lottery</module>
         <module>live-gateway</module>
-        <module>mall-sms</module>
-        <module>mall-ums</module>
-        <module>mall-pms</module>
-        <module>mall-oms</module>
     </modules>
 
     <parent>
@@ -255,27 +251,6 @@
             <dependency>
                 <groupId>com.live</groupId>
                 <artifactId>common-web</artifactId>
-                <version>${live.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.live</groupId>
-                <artifactId>mall-oms</artifactId>
-                <version>${live.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.live</groupId>
-                <artifactId>mall-pms</artifactId>
-                <version>${live.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.live</groupId>
-                <artifactId>mall-sms</artifactId>
-                <version>${live.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.live</groupId>
-                <artifactId>mall-ums</artifactId>
                 <version>${live.version}</version>
             </dependency>
 

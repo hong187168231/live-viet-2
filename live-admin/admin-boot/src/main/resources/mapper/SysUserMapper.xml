@@ -15,8 +15,8 @@
         <result property="mobile" column="mobile" jdbcType="VARCHAR"/>
         <result property="status" column="status" jdbcType="BOOLEAN"/>
         <result property="email" column="email" jdbcType="VARCHAR"/>
-        <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
-        <result  property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="gmt_create" jdbcType="TIMESTAMP"/>
+        <result  property="updateTime" column="gmt_modified" jdbcType="TIMESTAMP"/>
         <result property="deleted" column="deleted" jdbcType="BOOLEAN"/>
         <collection property="roles" ofType="string" javaType="list">
             <result column="roleCode"></result>

@@ -8,10 +8,8 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * @author huawei
+ * @author puff
  * @desc redisson 连接配置类
- * @email huawei_code@163.com
- * @date 2021/2/22
  */
 @Component
 @ConfigurationProperties(prefix = "spring.redis")

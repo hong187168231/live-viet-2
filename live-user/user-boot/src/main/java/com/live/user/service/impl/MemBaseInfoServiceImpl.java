@@ -7,6 +7,7 @@ import com.live.common.redis.utils.RedisUtils;
 import com.live.common.result.Result;
 import com.live.common.utils.RandomUtil;
 import com.live.common.utils.encrypt.MD5;
+import com.live.user.common.constant.UserConstants;
 import com.live.user.mapper.MemBaseInfoMapper;
 import com.live.user.pojo.entity.MemBaseInfo;
 import com.live.user.pojo.entity.vo.AppLoginVo;
@@ -16,6 +17,7 @@ import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.Optional;
 
@@ -23,8 +25,9 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MemBaseInfoServiceImpl extends ServiceImpl<MemBaseInfoMapper, MemBaseInfo> implements MemBaseInfoService {
 
-
+    @Resource
     private MemBaseInfoMapper memBaseInfoMapper;
+    @Resource
     private RedisUtils redisUtils;
 
     @Override
@@ -46,8 +49,8 @@ public class MemBaseInfoServiceImpl extends ServiceImpl<MemBaseInfoMapper, MemBa
         String seckey = req.getAccount() + RandomUtil.uuid();
         String accToken = MD5.md5(seckey, "UTF-8");
 
-        redisUtils.set(accToken, JSON.toJSONString(userInfo), 60*60*24*7);
-        redisUtils.set(req.getAccount(), accToken, 60*60*24*7);
+        redisUtils.set(UserConstants.USER_LOGIN_INFO_KEY + accToken, JSON.toJSONString(userInfo), 60 * 60 * 24 * 7);
+        redisUtils.set(UserConstants.USER_LOGIN_ACCTOKEN + accToken, 60 * 60 * 24 * 7);
         //返回登录信息
         AppLoginVo appLoginVo = this.getAppLoginVo(accToken, userInfo);
         return Result.success(appLoginVo);

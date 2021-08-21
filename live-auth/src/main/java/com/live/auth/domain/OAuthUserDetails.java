@@ -3,7 +3,6 @@ package com.live.auth.domain;
 import cn.hutool.core.collection.CollectionUtil;
 import com.live.admin.pojo.entity.SysUser;
 import com.live.auth.common.enums.PasswordEncoderTypeEnum;
-import com.live.mall.ums.pojo.dto.AuthMemberDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -46,12 +45,6 @@ public class OAuthUserDetails implements UserDetails {
         }
     }
 
-    public OAuthUserDetails(AuthMemberDTO member) {
-        this.setId(member.getId());
-        this.setUsername(member.getUsername());
-        this.setPassword(PasswordEncoderTypeEnum.BCRYPT.getPrefix() + member.getPassword());
-        this.setEnabled(STATUS_YES.equals(member.getStatus()));
-    }
 
 
     @Override

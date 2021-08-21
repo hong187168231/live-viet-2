@@ -13,8 +13,8 @@
             <result property="status" column="status" jdbcType="BOOLEAN"/>
             <result property="defaulted" column="defaulted" jdbcType="BOOLEAN"/>
             <result property="remark" column="remark" jdbcType="VARCHAR"/>
-            <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
-            <result  property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="gmt_create" jdbcType="TIMESTAMP"/>
+            <result  property="updateTime" column="gmt_modified" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="Base_Column_List">

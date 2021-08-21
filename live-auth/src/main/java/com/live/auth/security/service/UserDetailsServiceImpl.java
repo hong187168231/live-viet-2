@@ -7,8 +7,6 @@ import com.live.auth.domain.OAuthUserDetails;
 import com.live.common.result.Result;
 import com.live.common.result.ResultCode;
 import com.live.common.web.util.JwtUtils;
-import com.live.mall.ums.api.MemberFeignClient;
-import com.live.mall.ums.pojo.dto.AuthMemberDTO;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AccountExpiredException;
@@ -30,7 +28,6 @@ import org.springframework.stereotype.Service;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private UserFeignClient userFeignClient;
-    private MemberFeignClient memberFeignClient;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

@@ -1,19 +1,12 @@
 package com.live.auth.service.impl;
 
 import cn.binarywang.wx.miniapp.api.WxMaService;
-import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
-import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.convert.Convert;
-import cn.hutool.core.lang.Assert;
 import com.live.auth.common.jwt.JwtGenerator;
 import com.live.auth.domain.OAuthToken;
 import com.live.auth.domain.UserInfo;
 import com.live.auth.service.IAuthService;
 import com.live.common.constant.AuthConstants;
-import com.live.common.result.Result;
-import com.live.common.result.ResultCode;
-import com.live.mall.ums.api.MemberFeignClient;
-import com.live.mall.ums.pojo.entity.UmsMember;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
@@ -32,7 +25,6 @@ import java.util.Set;
 @AllArgsConstructor
 public class WechatAuthServiceImpl implements IAuthService {
 
-    private MemberFeignClient memberFeignClient;
     private WxMaService wxMaService;
     private JwtGenerator jwtGenerator;
 

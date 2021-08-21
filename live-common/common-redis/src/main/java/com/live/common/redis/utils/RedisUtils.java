@@ -12,9 +12,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author huawei
  * @desc spring redis 通用工具类
- * @email huawei_code@163.com
  * @date 2021/2/9
  */
 @Component

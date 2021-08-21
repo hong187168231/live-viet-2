@@ -47,8 +47,8 @@ public class DeptController {
 
         LambdaQueryWrapper<SysDept> baseQuery = new LambdaQueryWrapper<SysDept>()
                 .orderByAsc(SysDept::getSort)
-                .orderByDesc(SysDept::getGmtModified)
-                .orderByDesc(SysDept::getGmtCreate);
+                .orderByDesc(SysDept::getUpdateTime)
+                .orderByDesc(SysDept::getCreateTime);
         QueryModeEnum queryModeEnum = QueryModeEnum.getByCode(queryMode);
 
         switch (queryModeEnum) {
