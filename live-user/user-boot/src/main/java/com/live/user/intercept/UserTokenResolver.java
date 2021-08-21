@@ -1,14 +1,10 @@
 package com.live.user.intercept;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.live.common.annotation.LoginUser;
 import com.live.common.constant.AppConstants;
 import com.live.common.pojo.bo.LoginInfo;
 import com.live.common.redis.utils.RedisUtils;
-import com.live.common.utils.CopyUtils;
-import com.live.user.common.constant.UserConstants;
-import com.live.user.pojo.entity.MemBaseInfo;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.MethodParameter;
