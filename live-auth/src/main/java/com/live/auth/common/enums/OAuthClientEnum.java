@@ -1,4 +1,5 @@
 package com.live.auth.common.enums;
+
 import lombok.Getter;
 
 
@@ -11,23 +12,23 @@ public enum OAuthClientEnum {
 
     TEST("client", "测试客户端"),
     ADMIN("live-admin", "系统管理端"),
-    WEAPP("live-weapp", "微信小程序端");
-
+    WEAPP("live-weapp", "微信小程序端"),
+    APP("live-app", "app端登录");
 
     @Getter
     private String clientId;
 
     @Getter
-    private String  desc;
+    private String desc;
 
-    OAuthClientEnum(String clientId,String desc){
-        this.clientId=clientId;
-        this.desc=desc;
+    OAuthClientEnum(String clientId, String desc) {
+        this.clientId = clientId;
+        this.desc = desc;
     }
 
     public static OAuthClientEnum getByClientId(String clientId) {
         for (OAuthClientEnum client : OAuthClientEnum.values()) {
-            if(client.getClientId().equals(clientId)){
+            if (client.getClientId().equals(clientId)) {
                 return client;
             }
         }

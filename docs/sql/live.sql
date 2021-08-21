@@ -341,9 +341,9 @@ CREATE TABLE `sys_user`  (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES (1, 'root', '超级管理员', 2, '$2a$10$GdoxtCdEM0LHvKpxCa5sgOacLQr0c2PslRHknI3FSHWMdV0hc4Z6.', 1, 'https://gitee.com/haoxr/image/raw/master/20210605215800.png', '17621590365', 1, '1490493387@qq.com', 0, '2021-02-10 12:27:30', '2021-06-06 23:36:51');
-INSERT INTO `sys_user` VALUES (2, 'admin', '系统管理员', 1, '$2a$10$yJSqqr6sTxNuYtA6EKcVUe2I4USFCzJ29sNcRrBvtAkSYcNg5ydQ6', 2, 'https://gitee.com/haoxr/image/raw/master/20210605215800.png', '17621210366', 1, '1490493387@qq.com', 0, '2019-10-10 13:41:22', '2021-06-06 23:41:35');
-INSERT INTO `sys_user` VALUES (3, 'test', '测试小用户', 1, '$2a$10$MPJkNw.hKT/fZOgwYP8q9eu/rFJJDsNov697AmdkHNJkpjIpVSw2q', 1, 'https://gitee.com/haoxr/image/raw/master/20210605215800.png', NULL, 1, NULL, 0, '2021-06-05 01:31:29', '2021-06-05 01:31:29');
+INSERT INTO `sys_user` VALUES (1, 'root', '超级管理员', 2, '$2a$10$GdoxtCdEM0LHvKpxCa5sgOacLQr0c2PslRHknI3FSHWMdV0hc4Z6.', 1, 'https://gitee.com/puff/image/raw/master/20210605215800.png', '17621590365', 1, '1490493387@qq.com', 0, '2021-02-10 12:27:30', '2021-06-06 23:36:51');
+INSERT INTO `sys_user` VALUES (2, 'admin', '系统管理员', 1, '$2a$10$yJSqqr6sTxNuYtA6EKcVUe2I4USFCzJ29sNcRrBvtAkSYcNg5ydQ6', 2, 'https://gitee.com/puff/image/raw/master/20210605215800.png', '17621210366', 1, '1490493387@qq.com', 0, '2019-10-10 13:41:22', '2021-06-06 23:41:35');
+INSERT INTO `sys_user` VALUES (3, 'test', '测试小用户', 1, '$2a$10$MPJkNw.hKT/fZOgwYP8q9eu/rFJJDsNov697AmdkHNJkpjIpVSw2q', 1, 'https://gitee.com/puff/image/raw/master/20210605215800.png', NULL, 1, NULL, 0, '2021-06-05 01:31:29', '2021-06-05 01:31:29');
 INSERT INTO `sys_user` VALUES (8, '123', NULL, 0, '$2a$10$wWCWmCEVQWd6mP5erjXtRez5LpwBqwAReN1A22BtxcwT8E1MbBpqa', 11, '', NULL, 1, NULL, 0, '2021-08-14 22:22:22', '2021-08-14 22:22:22');
 
 -- ----------------------------

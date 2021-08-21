@@ -23,23 +23,18 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
         }else{
             return true;
         }
-
         if(annotation == null){
             return true;
         }
-
         //获取用户凭证
         String token = request.getHeader(AuthConstants.AUTHORIZATION_KEY);
         if(StringUtils.isBlank(token)){
             token = request.getParameter(AuthConstants.AUTHORIZATION_KEY);
         }
-
         //凭证为空
         if(StringUtils.isBlank(token)){
             throw new BizException("凭证不能为空");
         }
-
-
         //设置userId到request里，后续根据userId，获取用户信息
 //        request.setAttribute(USER_KEY, Long.parseLong(claims.getSubject()));
 

@@ -1,8 +1,11 @@
 package com.live.common.redis.redisson;
 
 import lombok.Data;
+import org.redisson.config.ClusterServersConfig;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * @author huawei
@@ -11,22 +14,26 @@ import org.springframework.stereotype.Component;
  * @date 2021/2/22
  */
 @Component
-@ConfigurationProperties(prefix = "redisson")
+@ConfigurationProperties(prefix = "spring.redis")
 @Data
 public class RedissonProperties {
 
-    private String serverAddress;
-
+    private String password;
+    private cluster cluster;
+    private String host;
     private String port;
 
-    private String password;
+    public static class cluster {
+        private List<String> nodes;
 
-    private Integer database;
-
-    public Integer getDatabase() {
-        if (null == database) {
-            return 0;
+        public List<String> getNodes() {
+            return nodes;
         }
-        return database;
+
+        public void setNodes(List<String> nodes) {
+            this.nodes = nodes;
+        }
     }
+
+
 }

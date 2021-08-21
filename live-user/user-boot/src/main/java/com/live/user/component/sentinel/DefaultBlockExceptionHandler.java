@@ -1,4 +1,4 @@
-package com.live.admin.component.sentinel;
+package com.live.user.component.sentinel;
 
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.BlockExceptionHandler;
 import com.alibaba.csp.sentinel.slots.block.BlockException;

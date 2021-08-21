@@ -1,4 +1,4 @@
-package com.live.admin.common.util;
+package com.live.user.common.util;
 
 import cn.hutool.json.JSONUtil;
 import com.nimbusds.jose.JWSObject;

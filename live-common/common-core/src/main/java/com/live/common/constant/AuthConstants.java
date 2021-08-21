@@ -8,6 +8,12 @@ public interface AuthConstants {
     String AUTHORIZATION_KEY = "Authorization";
 
     /**
+     * 认证请求头key
+     */
+    String ACCTOKEN_KEY = "acctoken_key";
+
+
+    /**
      * JWT令牌前缀
      */
     String AUTHORIZATION_PREFIX = "bearer ";

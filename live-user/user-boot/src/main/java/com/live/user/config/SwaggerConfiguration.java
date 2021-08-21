@@ -1,4 +1,4 @@
-package com.live.admin.config;
+package com.live.user.config;
 
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
@@ -56,7 +56,7 @@ public class SwaggerConfiguration {
         List<SecurityContext> securityContexts=Lists.newArrayList(securityContext);
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.live.game.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.live.user.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .securityContexts(securityContexts)
@@ -69,7 +69,7 @@ public class SwaggerConfiguration {
                 .title("系统管理")
                 .description("<div style='font-size:14px;color:red;'>用户、角色、部门、菜单、权限、字典、客户端接口</div>")
                 .termsOfServiceUrl("https://www.live.tech")
-                .contact(new Contact("有来技术团队", "https://github.com/hxrui", "1490493387@qq.com"))
+                .contact(new Contact("泡芙技术团队", "https://github.com/hxrui", "1490493387@qq.com"))
                 .license("Open Source")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
                 .version("1.0.0")

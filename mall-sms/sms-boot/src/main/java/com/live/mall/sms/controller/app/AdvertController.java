@@ -31,4 +31,13 @@ public class AdvertController {
         List<SmsAdvert> data = iSmsAdvertService.list(queryWrapper);
         return Result.success(data);
     }
+
+
+    @ApiOperation(value = "hello")
+    @GetMapping("/hello")
+    public String detail() {
+
+        return "ok";
+    }
+
 }

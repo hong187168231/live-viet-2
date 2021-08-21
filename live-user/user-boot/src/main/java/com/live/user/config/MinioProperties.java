@@ -1,4 +1,4 @@
-package com.live.admin.config;
+package com.live.user.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

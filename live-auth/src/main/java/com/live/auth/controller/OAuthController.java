@@ -21,6 +21,7 @@ import org.springframework.security.oauth2.provider.endpoint.TokenEndpoint;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
+
 import java.security.KeyPair;
 import java.security.Principal;
 import java.security.interfaces.RSAPublicKey;
@@ -63,7 +64,7 @@ public class OAuthController {
          */
         String clientId = JwtUtils.getOAuthClientId();
         OAuthClientEnum client = OAuthClientEnum.getByClientId(clientId);
-        switch (client) {
+            switch (client) {
             case TEST: // knife4j接口测试文档使用 client_id/client_secret : client/123456
                 return tokenEndpoint.postAccessToken(principal, parameters).getBody();
             default:
@@ -72,12 +73,21 @@ public class OAuthController {
     }
 
     @ApiOperation(value = "微信授权登录")
-    @ApiImplicitParam(name = "code",  value = "小程序授权code",paramType = "path")
+    @ApiImplicitParam(name = "code", value = "小程序授权code", paramType = "path")
     @PostMapping("/token/{code}")
     public Result wechatLogin(@PathVariable String code, @RequestBody UserInfo userInfo) {
         OAuthToken token = wechatAuthService.login(code, userInfo);
         return Result.success(token);
     }
+
+//
+//    @ApiOperation(value = "app登录")
+//    @PostMapping("/appLogin")
+//    public Result appLogin(@RequestBody UserInfo userInfo) {
+//        OAuthToken token = wechatAuthService.login(code, userInfo);
+//        return Result.success(token);
+//    }
+
 
     @ApiOperation(value = "注销", notes = "logout")
     @DeleteMapping("/logout")

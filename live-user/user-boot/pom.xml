@@ -104,6 +104,13 @@
 
         <dependency>
             <groupId>com.live</groupId>
+            <artifactId>user-api</artifactId>
+            <version>${live.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.live</groupId>
             <artifactId>common-mybatis</artifactId>
             <version>${live.version}</version>
         </dependency>

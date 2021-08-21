@@ -28,27 +28,27 @@ public class SwaggerConfiguration {
     @Bean
     public Docket restApi() {
         //schema
-        List<GrantType> grantTypes=new ArrayList<>();
+        List<GrantType> grantTypes = new ArrayList<>();
         //密码模式
-        String passwordTokenUrl="http://localhost:9999/live-auth/oauth/token";
-        ResourceOwnerPasswordCredentialsGrant resourceOwnerPasswordCredentialsGrant=new ResourceOwnerPasswordCredentialsGrant(passwordTokenUrl);
+        String passwordTokenUrl = "http://localhost:9999/live-auth/oauth/token";
+        ResourceOwnerPasswordCredentialsGrant resourceOwnerPasswordCredentialsGrant = new ResourceOwnerPasswordCredentialsGrant(passwordTokenUrl);
         grantTypes.add(resourceOwnerPasswordCredentialsGrant);
-        OAuth oAuth=new OAuthBuilder().name("oauth2")
+        OAuth oAuth = new OAuthBuilder().name("oauth2")
                 .grantTypes(grantTypes).build();
         //context
         //scope方位
-        List<AuthorizationScope> scopes=new ArrayList<>();
-        scopes.add(new AuthorizationScope("read","read  resources"));
-        scopes.add(new AuthorizationScope("write","write resources"));
-        scopes.add(new AuthorizationScope("reads","read all resources"));
-        scopes.add(new AuthorizationScope("writes","write all resources"));
+        List<AuthorizationScope> scopes = new ArrayList<>();
+        scopes.add(new AuthorizationScope("read", "read  resources"));
+        scopes.add(new AuthorizationScope("write", "write resources"));
+        scopes.add(new AuthorizationScope("reads", "read all resources"));
+        scopes.add(new AuthorizationScope("writes", "write all resources"));
 
-        SecurityReference securityReference=new SecurityReference("oauth2",scopes.toArray(new AuthorizationScope[]{}));
-        SecurityContext securityContext=new SecurityContext(Lists.newArrayList(securityReference),PathSelectors.ant("/**"));
+        SecurityReference securityReference = new SecurityReference("oauth2", scopes.toArray(new AuthorizationScope[]{}));
+        SecurityContext securityContext = new SecurityContext(Lists.newArrayList(securityReference), PathSelectors.ant("/**"));
         //schemas
-        List<SecurityScheme> securitySchemes=Lists.newArrayList(oAuth);
+        List<SecurityScheme> securitySchemes = Lists.newArrayList(oAuth);
         //securyContext
-        List<SecurityContext> securityContexts=Lists.newArrayList(securityContext);
+        List<SecurityContext> securityContexts = Lists.newArrayList(securityContext);
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.live.auth.controller"))
@@ -63,7 +63,7 @@ public class SwaggerConfiguration {
         return new ApiInfoBuilder().title("OAuth2认证中心")
                 .description("<div style='font-size:14px;color:red;'>OAuth2认证、注销、获取验签公钥接口</div>")
                 .termsOfServiceUrl("https://www.live.tech")
-                .contact(new Contact("有来技术团队", "https://github.com/hxrui", "1490493387@qq.com"))
+                .contact(new Contact("泡芙技术团队", "https://github.com/hxrui", "1490493387@qq.com"))
                 .license("Open Source")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
                 .version("1.0.0")

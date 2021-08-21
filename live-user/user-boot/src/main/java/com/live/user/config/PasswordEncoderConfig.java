@@ -1,4 +1,4 @@
-package com.live.admin.config;
+package com.live.user.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
