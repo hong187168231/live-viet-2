@@ -49,8 +49,8 @@ public class MemBaseInfoServiceImpl extends ServiceImpl<MemBaseInfoMapper, MemBa
         String seckey = req.getAccount() + RandomUtil.uuid();
         String accToken = MD5.md5(seckey, "UTF-8");
 
-        redisUtils.set(UserConstants.USER_LOGIN_INFO_KEY + accToken, JSON.toJSONString(userInfo), 60 * 60 * 24 * 7);
-        redisUtils.set(UserConstants.USER_LOGIN_ACCTOKEN + accToken, 60 * 60 * 24 * 7);
+        redisUtils.set(UserConstants.USER_LOGIN_ACCTOKEN + accToken, JSON.toJSONString(userInfo), 60 * 60 * 24 * 7);
+        redisUtils.set(UserConstants.USER_LOGIN_INFO_KEY + req.getAccount(), accToken, 60 * 60 * 24 * 7);
         //返回登录信息
         AppLoginVo appLoginVo = this.getAppLoginVo(accToken, userInfo);
         return Result.success(appLoginVo);

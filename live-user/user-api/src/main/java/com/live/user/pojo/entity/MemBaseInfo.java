@@ -4,6 +4,7 @@ package com.live.user.pojo.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.live.common.base.BaseEntity;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 
 @Data
 @Accessors(chain = true)
+@TableName("mem_baseInfo")
 public class MemBaseInfo extends BaseEntity {
 
     @TableId(type = IdType.AUTO)

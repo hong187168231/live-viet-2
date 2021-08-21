@@ -1,5 +1,6 @@
 package com.live.user.controller;
 
+import com.live.common.annotation.LoginUser;
 import com.live.common.redis.utils.RedisUtils;
 import com.live.user.pojo.entity.MemBaseInfo;
 import io.swagger.annotations.Api;
@@ -24,11 +25,11 @@ public class TestController {
 
     @ApiOperation(value = "hello")
     @GetMapping("/hello")
-    public String detail() {
+    public String detail(@LoginUser MemBaseInfo memBaseInfo2) {
         MemBaseInfo memBaseInfo = new MemBaseInfo();
         memBaseInfo.setAccount("dd");
         memBaseInfo.setBalance(2000L);
-        redisUtils.set("dsd",memBaseInfo);
+        redisUtils.set("dsd", memBaseInfo);
         return "ok";
     }
 

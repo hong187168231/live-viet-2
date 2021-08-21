@@ -1,5 +1,6 @@
 package com.live.user.controller;
 
+import com.live.common.annotation.AllowAccess;
 import com.live.common.result.Result;
 import com.live.user.pojo.entity.vo.AppLoginVo;
 import com.live.user.pojo.req.LoginReq;
@@ -27,6 +28,7 @@ public class MemBaseInfoController {
 
     @ApiOperation(value = "登录接口", httpMethod = "POST")
     @PostMapping(value = "/login")
+    @AllowAccess
     public Result<AppLoginVo> loginDo(@RequestBody LoginReq req) {
         return memBaseInfoService.appLogin(req);
     }
